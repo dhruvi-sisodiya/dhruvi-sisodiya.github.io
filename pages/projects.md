@@ -8,13 +8,13 @@
 
  <div class="project-card">
   <h3>1. AI Chatbot Disclosure and Customer Behavior Analysis</h3>
- <embed src="/assets/reports/AI_Chatbot-Report.pdf" 
+ <embed src="https://drive.google.com/file/d/1pMuQJvz8JNXRrVClzEXySzyNpG8HbE_R/view?usp=sharing" 
        type="application/pdf" 
        width="100%" height="500px" />
     <p>
         Business analysis using <b>SQL</b>, <b>Gretl</b>, and <b>Python</b> on an experimental dataset.
   </p>
-  <a href="/assets/reports/ProjectAI.pdf" target="_blank">📄 View Full Report</a>
+  <a href="https://drive.google.com/file/d/1pMuQJvz8JNXRrVClzEXySzyNpG8HbE_R/view?usp=sharing" target="_blank">📄 View Full Report</a>
 </div>
 
 
