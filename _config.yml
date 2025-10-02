@@ -20,6 +20,7 @@ author: Dhruvi Sisodiya
 ###############################################
 
 navbar-links:
+<<<<<<< HEAD
   About Me: "pages/academics"
   Projects: "pages/projects"
   Design Portfolio: "pages/design_Portfolio"
@@ -28,6 +29,15 @@ navbar-links:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
   # Author's home: "https://deanattali.com"
+=======
+  About Me:
+    - Academic Interests: "pages/academics"
+    - Design Portfolio: "pages/design_Portfolio"
+  Resources:
+    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's home: "https://deanattali.com"
+>>>>>>> 4f87238abc378aba7fe5c849bd712d36b4537f5d
 
 ################
 # --- Logo --- #
