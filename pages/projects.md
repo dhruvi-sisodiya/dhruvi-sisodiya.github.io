@@ -1,4 +1,4 @@
-<section id="projects">
+
   <h2>My Projects</h2>
   <p>
     Here is a collection of my academic, professional, and creative projects, 
@@ -52,4 +52,4 @@
     </p>
     <a href="/projects/amalthea_portfolio.html">🎨 View Portfolio</a>
   </div> --> --> -->
-</section>
+
