@@ -8,13 +8,14 @@
 
  <div class="project-card">
   <h3>1. AI Chatbot Disclosure and Customer Behavior Analysis</h3>
-  <iframe src="/assets/reports/AI_Chatbot-Report.pdf#page=1" 
-          width="100%" height="300px" style="border:1px solid #ccc;">
-  </iframe>
+ <iframe src="/assets/reports/AI_Chatbot-Report.pdf#page=1" 
+        width="100%" height="500px" 
+        style="border:1px solid #ccc;">
+</iframe>
   <p>
     Business analysis using <b>SQL</b>, <b>Gretl</b>, and <b>Python</b> on an experimental dataset.
   </p>
-  <a href="/assets/reports/AI_Chatbot-Report.pdf" target="_blank">📄 View Full Report</a>
+  <a href="/assets/reports/ProjectAI.pdf" target="_blank">📄 View Full Report</a>
 </div>
 
 
