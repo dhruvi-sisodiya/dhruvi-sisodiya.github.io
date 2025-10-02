@@ -22,7 +22,7 @@ author: Dhruvi Sisodiya
 navbar-links:
   About Me:
     - Academic Interests: "pages/academics"
-    - Design Portfolio: "pages/design_portfolio"
+    - Design Portfolio: "pages/design_Portfolio"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
