@@ -6,7 +6,6 @@
     to its document or showcase.
   </p>
 
-  <!-- Project 1 -->
   <div class="project">
     <h3>AI Chatbot Disclosure and Customer Behavior Analysis</h3>
     <p>
@@ -16,31 +15,23 @@
     <a href="/assets/reports/AI_Chatbot-Report.pdf" target="_blank">📄 View Report</a> 
   </div>
 
-  <!-- <hr>
-
-  Project 2
   <div class="project">
     <h3>Restaurant Tips Analysis</h3>
     <p>
       Conducted statistical analysis using Gretl, Python, and SQL to identify 
       customer tipping behavior drivers in the restaurant industry.  
     </p>
-    <a href="/assets/reports/tips_analysis.pdf" target="_blank">📄 View Report</a>
+    <a href="/assets/reports/MS 419- Restaurant Tips Analysis Report.pdf" target="_blank">📄 View Report</a>
   </div>
 
-  <hr>
-
-  <!-- Project 3 -->
-  <!-- <div class="project">
+  <div class="project">
     <h3>TEDxIITGandhinagar Design Portfolio</h3>
     <p>
       Led the design team for TEDx IITGN ‘24. Developed event branding, 
       merchandise, and social media campaigns.  
     </p>
-    <a href="/projects/tedx_portfolio.html">🎨 View Portfolio</a>
+    <a href="/assets/reports/Vodafone case study Group 9.pdf">📄 View presentation</a>
   </div>
-
-  <hr>
 
   <!-- Project 4 -->
   <!-- <div class="project">
@@ -52,4 +43,3 @@
     </p>
     <a href="/projects/amalthea_portfolio.html">🎨 View Portfolio</a>
   </div> --> --> -->
-
