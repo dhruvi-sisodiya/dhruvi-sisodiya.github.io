@@ -6,7 +6,7 @@ subtitle: Design Portfolio
 
 I have a strong interest in graphic design and visual presentation, which I’ve developed through key leadership roles at IIT Gandhinagar.
 
-# TEDx IITGandhinagar '24
+# TEDxIITGandhinagar '24
 
 As Design Team Lead, I guided a team of 10 members. I worked on creating the event’s identity across merchandise, social media campaigns, and stage design.
 
