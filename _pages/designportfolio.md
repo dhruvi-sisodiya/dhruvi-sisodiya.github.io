@@ -1,7 +1,10 @@
 ---
 layout: page
-title: About me
-subtitle: Design Portfolio
+title: Design Portfolio
+subtitle: A showcase of my Graphic Design work 
+featured-on-home: true
+description: Explore the variety of Posts, Printing media, Merchandise etc that I had created for my College Summits.
+thumbnail-img: "/assets/img/design12.jpeg"
 ---
 
 I have a strong interest in graphic design and visual presentation, which I’ve developed through key leadership roles at IIT Gandhinagar.

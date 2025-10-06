@@ -1,7 +1,12 @@
 ---
+# layout: page
+# title: About me
+# subtitle: Academic Interests
 layout: page
 title: About me
-subtitle: Academic Interests
+subtitle: A showcase of my work and Achievements
+featured-on-home: false
+description: Get to know me better, Learn about my story and what makes me unique.
 ---
 
 <section id="about-me">

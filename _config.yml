@@ -20,9 +20,9 @@ author: Dhruvi Sisodiya
 ###############################################
 
 navbar-links:
-  About Me: "pages/academics"
-  Projects: "pages/projects"
-  Design Portfolio: "pages/design_Portfolio"
+  About Me: "academics"
+  Projects: "projects"
+  Design Portfolio: "designportfolio"
   
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -118,7 +118,9 @@ feed_show_excerpt: true
 
 # Whether or not to show a list of tags below each post preview in the feed page
 feed_show_tags: true
-
+# Show featured pages on the home page
+# Set to true to display pages marked with "featured-on-home: true"
+home_show_featured_pages: true
 # Add a search button to the navbar
 post_search: true
 
@@ -273,21 +275,30 @@ kramdown:
   input: GFM
 
 # Default YAML values (more information on Jekyll's site)
+# Collections configuration
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default YAML values (more information on Jekyll's site)
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
+      comments: true # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
-
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md

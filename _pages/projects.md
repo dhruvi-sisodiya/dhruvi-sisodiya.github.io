@@ -1,7 +1,10 @@
 ---
 layout: page
-title: "Projects"
-subtitle: Academic Projects
+title: My Projects
+subtitle: A showcase of intensive Academic Projects
+featured-on-home: true
+description: Explore my portfolio of projects, from web development to creative endeavors. See what I've been working on lately.
+thumbnail-img: "/assets/img/tnail1.png"
 ---
 
 <h2>My Projects</h2>
@@ -70,3 +73,9 @@ subtitle: Academic Projects
      <a href="https://drive.google.com/file/d/1igNGfvtLauIGPz-UvCzp3iqHAThWfWpB/view?usp=sharing" target="_blank">
         <img src="/assets/img/tnail6.png" alt="Thumbnail 6" width="1000" />
     </a>
+
+<!-- ---
+layout: page
+title: "Projects"
+subtitle: Academic Projects
+--- -->

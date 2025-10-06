@@ -97,6 +97,8 @@ hr.small {
   border-radius: 0.1875rem;
 }
 
+
+
 /* fix in-page anchors to not be behind fixed header */
 :target:before {
   content: "";
@@ -1122,5 +1124,106 @@ pre {
   }
   #nav-search-text {
     display: inline-block;
+  }
+}
+
+/* --- Featured Pages --- */
+
+.featured-pages-section {
+  margin-bottom: 2.5rem;
+}
+
+.featured-pages-title {
+  font-family: var(--header-font);
+  font-size: 1.75rem;
+  color: var(--text-col);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--navbar-col);
+  padding-bottom: 0.5rem;
+}
+
+.pages-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.page-preview {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: var(--page-col);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.page-preview:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.page-preview a {
+  text-decoration: none;
+  font-family: var(--header-font);
+  color: var(--text-col);
+}
+
+.page-preview a:focus,
+.page-preview a:hover {
+  text-decoration: none;
+  color: var(--hover-col);
+}
+
+.page-preview .page-title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.page-preview .page-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: var(--mid-col);
+  font-size: 1.1rem;
+}
+
+.page-preview .page-description {
+  color: var(--text-col);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.page-preview .page-image {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-preview .page-image img {
+  max-width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.pages-posts-separator {
+  margin: 2.5rem 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--mid-col), transparent);
+}
+
+@media (max-width: 767px) {
+  .pages-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-preview {
+    padding: 1rem;
+  }
+  
+  .featured-pages-title {
+    font-size: 1.5rem;
   }
 }
