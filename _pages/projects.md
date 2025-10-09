@@ -15,7 +15,17 @@ thumbnail-img: "/assets/img/tnail1.png"
   </p>
 
  <div class="project-card">
-  <h3>1. AI Chatbot Disclosure and Customer Behavior Analysis</h3>
+  <h3>1. Sales Analytics PowerBi Dashboard for Global Electronics Retailers</h3>
+    <p>
+        Developed an interactive Power BI dashboard to analyze global electronics retail sales, integrating six extensive datasets to visualize key metrics like revenue, profit, and regional sales trends.Enabled strategic financial insights by tracking profitability, cost distribution, and market performance across brands, Product categories and countries to support data-driven business decisions.
+  </p>
+
+  <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank"><img src="/assets/img/tnail_1.png" alt="Thumbnail 1" width="1000" /></a>
+</div>
+
+
+ <div class="project-card">
+  <h3>2. AI Chatbot Disclosure and Customer Behavior Analysis</h3>
     <p>
         Studied an experimental dataset using SQL, Python, and Gretl to analyze AI chatbot disclosure.Extracted insights showing financial attributes influence purchase behavior more than call dynamics.Delivered analytical workflows and visualizations to support data-driven business strategy.
   </p>
@@ -23,8 +33,17 @@ thumbnail-img: "/assets/img/tnail1.png"
   <a href="https://github.com/dhruvi-sisodiya/business_intelligence-AI_chatbot_disclosure" target="_blank"><img src="/assets/img/tnail1.png" alt="Thumbnail 1" width="1000" /></a>
 </div>
 
+ <div class="project-card">
+  <h3>3. Movie Performance and Profitability Analysis using Excel Dashboard</h3>
+    <p>
+        Performed data cleaning, analysis, and visualization on a dataset of Hollywood movies to explore trends in budget, revenue, and ratings across years, genres, and production companies using Excel. Designed an interactive dashboard integrating pivot charts and slicers to uncover insights on profitability, audience preferences, and production performance, aiding data-driven decision-making.
+  </p>
+
+  <a href="https://docs.google.com/spreadsheets/d/1PRsDHUQzEJgM6h4xdb6mGeAUgB19PLX-/edit?usp=sharing&ouid=115653807694612666399&rtpof=true&sd=true" target="_blank"><img src="/assets/img/tnail_2.png" alt="Thumbnail 1" width="1000" /></a>
+</div>
+
 <div class="project">
-    <h3>2. Restaurant Tips Analysis</h3>
+    <h3>4. Restaurant Tips Analysis</h3>
     <p>
         Applied SQL, Python, and Gretl to evaluate drivers of tipping behavior in restaurants.
         Identified key customer and service factors shaping tipping decisions through statistical models.Provided actionable insights into consumer patterns for hospitality sector optimization.
@@ -34,7 +53,7 @@ thumbnail-img: "/assets/img/tnail1.png"
 </div>
 
 <div class="project">
-    <h3>3. Business Case Study - Vodafone</h3>
+    <h3>5. Business Case Study - Vodafone</h3>
     <p>
         Analyzed the evolution of India’s telecom industry with a focus on Vodafone’s entry, merger with Idea, and strategic challenges. Evaluated market concentration, pricing disruption from Jio, and financial impacts such as AGR dues.  
     </p>
@@ -43,7 +62,7 @@ thumbnail-img: "/assets/img/tnail1.png"
     </a>
 
 <div class="project">
-    <h3>4. Simulation-based Study of Diffusion through Porous Membranes using COMSOL Multiphysics</h3>
+    <h3>6. Simulation-based Study of Diffusion through Porous Membranes using COMSOL Multiphysics</h3>
     <p>
         Developed COMSOL multiphysics models to study diffusion and vapor transport in membranes.
         Analyzed coupled effects of geometry, porosity, flow, and temperature on transport phenomena.
@@ -54,7 +73,7 @@ thumbnail-img: "/assets/img/tnail1.png"
     </a>
 
 <div class="project">
-    <h3>5. Simulation and Optimization of Ethylene Glycol Production from Ethylene Oxide (Aspen + MATLAB)</h3>
+    <h3>7. Simulation and Optimization of Ethylene Glycol Production from Ethylene Oxide (Aspen + MATLAB)</h3>
     <p>
         Simulated continuous ethylene glycol production from ethylene oxide using Aspen Plus.
         Optimized process parameters to achieve 97.8% yield while minimizing by-products DEG/TEG.
@@ -65,7 +84,7 @@ thumbnail-img: "/assets/img/tnail1.png"
     </a>
 
 <div class="project">
-    <h3>6. Efficiency and effectiveness calculation of Helical Fins in a Double Heat Exchanger</h3>
+    <h3>8. Efficiency and effectiveness calculation of Helical Fins in a Double Heat Exchanger</h3>
     <p>
         Designed and modeled a Double Pipr heat exchanger for process efficiency improvements.
         Performed calculations on heat transfer, pressure drops, and optimized design for performance.Validated theoretical designs with industrial standards for chemical process applications.
