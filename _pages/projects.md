@@ -4,7 +4,7 @@ title: My Projects
 subtitle: A showcase of intensive Academic Projects
 featured-on-home: true
 description: Explore my portfolio of projects, from web development to creative endeavors. See what I've been working on lately.
-thumbnail-img: "/assets/img/tnail1.png"
+thumbnail-img: "/assets/img/tnail_1.png"
 ---
 
 <h2>My Projects</h2>
