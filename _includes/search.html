@@ -1,18 +1,98 @@
 {% if site.post_search %}
 
 <div id="beautifuljekyll-search-overlay">
-
-  <div id="nav-search-exit" title="Exit search">✕</div>
-  <input type="text" id="nav-search-input" placeholder="Search">
-  <ul id="search-results-container"></ul>
+  <div id="nav-search-exit" title="Close">✕</div>
+  <div class="search-dropdown">
+    <div class="search-input-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="nav-search-input" placeholder="Type to search..." autocomplete="off">
+    </div>
+    <div id="search-results-wrapper">
+      <div id="search-count"></div>
+      <ul id="search-results-container"></ul>
+    </div>
+  </div>
   
   <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('nav-search-input'),
-      resultsContainer: document.getElementById('search-results-container'),
-      json: '{{ site.baseurl }}/assets/data/searchcorpus.json' 
-    });
+    (function() {
+      var overlay = document.getElementById('beautifuljekyll-search-overlay');
+      var searchInput = document.getElementById('nav-search-input');
+      var searchCount = document.getElementById('search-count');
+      var resultsWrapper = document.getElementById('search-results-wrapper');
+      
+      var searchInstance = SimpleJekyllSearch({
+        searchInput: searchInput,
+        resultsContainer: document.getElementById('search-results-container'),
+        json: '{{ site.baseurl }}/assets/data/searchcorpus.json',
+        searchFields: ['title', 'desc', 'content', 'category'],
+        fuzzy: true,
+        limit: 10,
+        exclude: ['date'],
+        noResultsText: '<li class="no-results">No results found</li>',
+        searchResultTemplate: '<li class="search-result-item"><div class="result-content"><a href="{url}" class="result-title">{title}</a><div class="result-category">{category}</div></div></li>'
+      });
+      
+      // Show/hide results and update count
+      searchInput.addEventListener('input', function() {
+        var query = this.value.trim();
+        setTimeout(function() {
+          var results = document.querySelectorAll('#search-results-container li:not(.no-results)');
+          
+          if (query) {
+            resultsWrapper.style.display = 'block';
+            if (results.length > 0) {
+              searchCount.textContent = results.length + ' result' + (results.length !== 1 ? 's' : '');
+            } else {
+              searchCount.textContent = 'No results found';
+            }
+          } else {
+            resultsWrapper.style.display = 'none';
+            searchCount.textContent = '';
+          }
+        }, 50);
+      });
+      
+      // Focus input when overlay opens
+      var navSearchLink = document.getElementById('nav-search-link');
+      if (navSearchLink) {
+        navSearchLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          overlay.classList.add('is-visible');
+          setTimeout(function() {
+            searchInput.focus();
+          }, 100);
+        });
+      }
+      
+      // Close search
+      document.getElementById('nav-search-exit').addEventListener('click', function() {
+        overlay.classList.remove('is-visible');
+        searchInput.value = '';
+        resultsWrapper.style.display = 'none';
+        searchCount.textContent = '';
+      });
+      
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-visible')) {
+          overlay.classList.remove('is-visible');
+          searchInput.value = '';
+          resultsWrapper.style.display = 'none';
+          searchCount.textContent = '';
+        }
+      });
+      
+      // Close when clicking outside
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+          overlay.classList.remove('is-visible');
+          searchInput.value = '';
+          resultsWrapper.style.display = 'none';
+          searchCount.textContent = '';
+        }
+      });
+    })();
   </script>
 </div>
 

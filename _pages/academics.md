@@ -1,42 +1,245 @@
 ---
-# layout: page
-# title: About me
-# subtitle: Academic Interests
 layout: page
-title: About me
-subtitle: A showcase of my work and Achievements
+title: About Me
+subtitle: Senior Undergraduate - IIT Gandhinagar
 featured-on-home: false
-description: Get to know me better, Learn about my story and what makes me unique.
+description: Get to know me better. Learn about my story and what makes me unique.
 ---
 
-<section id="about-me">
-  <h2>About Me</h2>
-  <p>
-    I am a senior undergraduate at IIT Gandhinagar with a strong interest in 
-    business analytics, strategy, and design.
-    My background in Chemical Engineering, combined with hands-on project 
-    experience, has helped me build strong technical, analytical, and 
-    creative skills. I enjoy solving complex problems, leading teams, 
-    and presenting ideas through impactful visuals and data-driven insights.
-  </p>
+<style>
+.roadmap-container {
+  position: relative;
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
 
-  <h3>Skills & Interests</h3>
-  <ul>
-    <li><b>Programming Languages:</b> Python, SQL, MATLAB</li>
-    <li><b>Tools:</b> Advanced Excel, Polymath, COMSOL, Gretl, LaTeX, Autodesk Inventor, ANSYS, Adobe Illustrator, Canva</li>
-    <li><b>Relevant Courses:</b> Business Strategy, Marketing Analytics, Business Communication, Strategic Leadership</li>
-    <li><b>Fields of Interest:</b> Business Analytics, Strategy Consulting, Market Research, Process Optimization & Refinery Operations, Technology Commercialization & Business Development, Energy Economics and Sustainability, Cleaner Fuels</li>
-  </ul>
+.roadmap-path {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 2rem 2rem 2rem;
+  overflow-x: visible;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.roadmap-path::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 12%;
+  right: 12%;
+  height: 3px;
+  background: linear-gradient(90deg, #667EEA 0%, #764BA2 100%);
+  z-index: 0;
+}
+
+.journey-milestone {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.milestone-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.75rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  border: 3px solid #667EEA;
+}
+
+.journey-milestone:hover .milestone-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+}
+
+.milestone-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 0.4rem;
+}
+
+.milestone-subtitle {
+  font-size: 0.75rem;
+  color: #667EEA;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.milestone-detail {
+  font-size: 0.7rem;
+  color: #718096;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .roadmap-path {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .roadmap-path::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #667EEA 0%, #764BA2 100%);
+  }
+  
+  .journey-milestone {
+    min-width: 100%;
+  }
+}
+</style>
+
+<section class="intro-section" style="margin-bottom: 3rem;">
+  <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm Dhruvi</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4A5568;">
+      A senior undergraduate at <strong>IIT Gandhinagar</strong> passionate about bridging the gap between engineering and business. I combine technical expertise with strategic thinking, analytics, and creative design to solve complex problems and drive innovation.
+    </p>
+  </div>
 </section>
 
+<section style="margin-bottom: 3rem;">
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">My Journey</h2>
+  
+  <div class="roadmap-container">
+    <div class="roadmap-path">
+      <div class="journey-milestone">
+        <div class="milestone-icon">🎓</div>
+        <div class="milestone-title">Academic Foundation</div>
+        <div class="milestone-subtitle">IIT Gandhinagar</div>
+        <div class="milestone-detail">B.Tech Chemical Engineering</div>
+      </div>
+      
+      <div class="journey-milestone">
+        <div class="milestone-icon">📊</div>
+        <div class="milestone-title">Analytics & Strategy</div>
+        <div class="milestone-subtitle">Data-Driven Projects</div>
+        <div class="milestone-detail">Python, SQL, Power BI</div>
+      </div>
+      
+      <div class="journey-milestone">
+        <div class="milestone-icon">🔬</div>
+        <div class="milestone-title">Internships</div>
+        <div class="milestone-subtitle">IOCL & DRDO-IITGN</div>
+        <div class="milestone-detail">Process engineering & fuel cell research</div>
+      </div>
+      
+      <div class="journey-milestone">
+        <div class="milestone-icon">🎨</div>
+        <div class="milestone-title">Creative Leadership</div>
+        <div class="milestone-subtitle">TEDx '24 & Amalthea '23</div>
+        <div class="milestone-detail">Design Team Lead & Coordinator</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section style="margin-bottom: 3rem;">
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Technical Skills</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 1000px; margin: 0 auto;">
+    <div class="skill-card">
+      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">💻 Programming & Analytics</h3>
+      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
+        <li style="padding: 0.25rem 0;">✓ Python, SQL, MATLAB</li>
+        <li style="padding: 0.25rem 0;">✓ Excel, Power BI</li>
+      </ul>
+    </div>
+    
+    <div class="skill-card">
+      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">🛠️ Engineering Tools</h3>
+      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
+        <li style="padding: 0.25rem 0;">✓ COMSOL, ANSYS</li>
+        <li style="padding: 0.25rem 0;">✓ Aspen Plus, Inventor</li>
+      </ul>
+    </div>
+    
+    <div class="skill-card">
+      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">🎨 Design & Communication</h3>
+      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
+        <li style="padding: 0.25rem 0;">✓ Adobe Illustrator, Canva</li>
+        <li style="padding: 0.25rem 0;">✓ LaTeX, Brand Strategy</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<!-- ### My story
+<section style="margin-bottom: 3rem;">
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Areas of Interest</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; max-width: 900px; margin: 0 auto;">
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Business Analytics</span>
+    </div>
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Strategy Consulting</span>
+    </div>
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Market Research</span>
+    </div>
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Product Development</span>
+    </div>
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">User Research</span>
+    </div>
+    <div class="interest-card">
+      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">UI/UX Design</span>
+    </div>
+  </div>
+</section>
 
-💡 I have gained hands-on experience through internships at IOCL (Refinery Operations) and DRDO-IITGN (Fuel Cell Systems), where I worked on process optimization, simulation modeling, and technology demonstration. Alongside, I have developed strong proficiency in Python, SQL, MATLAB, and advanced analytical tools that enable me to approach problems with a structured, data-backed mindset.
+<style>
+.skill-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #667EEA;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-📊 My interests lie at the confluence of business analytics, strategy consulting, and product development. I enjoy translating technical insights into actionable strategies, optimizing workflows, and identifying growth opportunities by aligning technology with real-world business challenges.
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  border-left: 3px solid #5A67D8;
+}
 
-🌍 I aspire to work in roles that blend engineering knowledge with market insights, driving innovation in sustainable energy, emerging technologies, and product strategy. I am excited about collaborating with diverse teams to build impactful solutions that go beyond the lab and create tangible value. shorter just an intro
+.interest-card {
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #667EEA;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions. -->
+.interest-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+  border-left: 3px solid #5A67D8;
+}
+</style>

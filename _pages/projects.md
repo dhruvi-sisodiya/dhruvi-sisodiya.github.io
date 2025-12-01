@@ -7,94 +7,396 @@ description: Explore my portfolio of projects, from web development to creative 
 thumbnail-img: "/assets/img/tnail_1.png"
 ---
 
-<h2>My Projects</h2>
-  <p>
-    Here is a collection of my academic, professional, and creative projects, 
-    including reports, presentations, and design work. Each project is linked 
-    to its document or showcase.
-  </p>
+<style>
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 40px 0;
+  overflow: hidden;
+}
 
- <div class="project-card">
-  <h3>1. Sales Analytics PowerBi Dashboard for Global Electronics Retailers</h3>
-    <p>
-        Developed an interactive Power BI dashboard to analyze global electronics retail sales, integrating six extensive datasets to visualize key metrics like revenue, profit, and regional sales trends.Enabled strategic financial insights by tracking profitability, cost distribution, and market performance across brands, Product categories and countries to support data-driven business decisions.
-  </p>
+.carousel-wrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 80px 40px 80px;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
 
-  <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank"><img src="/assets/img/tnail_1.png" alt="Thumbnail 1" width="1000" /></a>
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.project-carousel-card {
+  min-width: 450px;
+  max-width: 450px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.project-carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.2),
+              0 0 20px rgba(37, 99, 235, 0.4),
+              0 0 35px rgba(29, 78, 216, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .project-carousel-card {
+    min-width: 400px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-carousel-card {
+    min-width: 380px;
+    max-width: 380px;
+  }
+  
+  .carousel-wrapper {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-carousel-card {
+    min-width: calc(100vw - 80px);
+    max-width: calc(100vw - 80px);
+  }
+  
+  .carousel-wrapper {
+    gap: 20px;
+    padding: 20px 40px 40px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-carousel-card {
+    min-width: calc(100vw - 60px);
+    max-width: calc(100vw - 60px);
+  }
+  
+  .carousel-wrapper {
+    gap: 15px;
+    padding: 20px 30px 40px 30px;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+}
+
+.project-carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  display: block;
+  background: #F7FAFC;
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-tag {
+  padding: 6px 14px;
+  background: #EDF2F7;
+  color: #667EEA;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 24px;
+  background: white;
+  color: #667EEA;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid #667EEA;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(102, 126, 234, 0.4);
+  color: #667EEA;
+  text-decoration: none;
+  border-color: #764BA2;
+}
+
+.drag-hint {
+  text-align: center;
+  margin-top: 30px;
+  color: #667EEA;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  letter-spacing: 0.5px;
+}
+
+.drag-hint::before,
+.drag-hint::after {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667EEA, transparent);
+}
+
+.drag-hint span {
+  position: relative;
+  animation: slideHint 2s ease-in-out infinite;
+}
+
+@keyframes slideHint {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(10px); opacity: 0.7; }
+}
+</style>
+
+<div class="carousel-container">
+  <div class="carousel-wrapper" id="projectCarousel">
+    
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank">
+        <img src="/assets/img/tnail_1.png" alt="Sales Analytics Dashboard" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Sales Analytics Dashboard</h3>
+        <div class="project-tags">
+          <span class="project-tag">Power BI</span>
+          <span class="project-tag">Analytics</span>
+        </div>
+        <p class="project-description">
+          Interactive Power BI dashboard analyzing global electronics retail sales, integrating six datasets to visualize revenue, profit, and regional trends for data-driven decisions.
+        </p>
+        <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://github.com/dhruvi-sisodiya/business_intelligence-AI_chatbot_disclosure" target="_blank">
+        <img src="/assets/img/tnail1.png" alt="AI Chatbot Analysis" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">AI Chatbot Disclosure Analysis</h3>
+        <div class="project-tags">
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Python</span>
+        </div>
+        <p class="project-description">
+          Experimental study using SQL, Python, and Gretl to analyze AI chatbot disclosure and customer behavior, revealing financial attributes' influence on purchase decisions.
+        </p>
+        <a href="https://github.com/dhruvi-sisodiya/business_intelligence-AI_chatbot_disclosure" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://docs.google.com/spreadsheets/d/1PRsDHUQzEJgM6h4xdb6mGeAUgB19PLX-/edit?usp=sharing&ouid=115653807694612666399&rtpof=true&sd=true" target="_blank">
+        <img src="/assets/img/tnail_2.png" alt="Movie Analytics" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Movie Performance Analysis</h3>
+        <div class="project-tags">
+          <span class="project-tag">Excel</span>
+          <span class="project-tag">Dashboard</span>
+        </div>
+        <p class="project-description">
+          Data cleaning and visualization of Hollywood movies exploring budget, revenue, and ratings trends. Interactive dashboard with pivot charts for profitability insights.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/1PRsDHUQzEJgM6h4xdb6mGeAUgB19PLX-/edit?usp=sharing&ouid=115653807694612666399&rtpof=true&sd=true" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/file/d/1DE64WGdTxbZrbLa_m5AyZTDSlHnVSZO-/view?usp=sharing" target="_blank">
+        <img src="/assets/img/tnail2.png" alt="Restaurant Tips" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Restaurant Tips Analysis</h3>
+        <div class="project-tags">
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Statistics</span>
+        </div>
+        <p class="project-description">
+          Applied SQL, Python, and Gretl to evaluate tipping behavior drivers, identifying key customer and service factors through statistical models for hospitality optimization.
+        </p>
+        <a href="https://drive.google.com/file/d/1DE64WGdTxbZrbLa_m5AyZTDSlHnVSZO-/view?usp=sharing" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/file/d/1pMuQJvz8JNXRrVClzEXySzyNpG8HbE_R/view?usp=sharing" target="_blank">
+        <img src="/assets/img/tnail3.png" alt="Vodafone Case Study" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Business Case Study - Vodafone</h3>
+        <div class="project-tags">
+          <span class="project-tag">Strategy</span>
+          <span class="project-tag">Analysis</span>
+        </div>
+        <p class="project-description">
+          Analyzed India's telecom industry evolution, focusing on Vodafone's entry, Idea merger, and strategic challenges including market concentration and AGR dues impact.
+        </p>
+        <a href="https://drive.google.com/file/d/1pMuQJvz8JNXRrVClzEXySzyNpG8HbE_R/view?usp=sharing" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/drive/folders/17DDzrFSeGdRjA_Oma8wAL4fD4M0Y1-iL?usp=drive_link" target="_blank">
+        <img src="/assets/img/tnail4.png" alt="COMSOL Simulation" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Membrane Diffusion Study</h3>
+        <div class="project-tags">
+          <span class="project-tag">COMSOL</span>
+          <span class="project-tag">Simulation</span>
+        </div>
+        <p class="project-description">
+          COMSOL multiphysics models studying diffusion and vapor transport in membranes, analyzing coupled effects of geometry, porosity, and temperature on efficiency.
+        </p>
+        <a href="https://drive.google.com/drive/folders/17DDzrFSeGdRjA_Oma8wAL4fD4M0Y1-iL?usp=drive_link" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/drive/folders/1ovd3u93y81AISCwJM5rUMYYT8mMA2RJS?usp=drive_link" target="_blank">
+        <img src="/assets/img/tnail1.png" alt="Ethylene Glycol" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Ethylene Glycol Production</h3>
+        <div class="project-tags">
+          <span class="project-tag">Aspen Plus</span>
+          <span class="project-tag">MATLAB</span>
+        </div>
+        <p class="project-description">
+          Simulated continuous ethylene glycol production using Aspen Plus, optimizing parameters to achieve 97.8% yield with MATLAB parametric validation.
+        </p>
+        <a href="https://drive.google.com/drive/folders/1ovd3u93y81AISCwJM5rUMYYT8mMA2RJS?usp=drive_link" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/file/d/1igNGfvtLauIGPz-UvCzp3iqHAThWfWpB/view?usp=sharing" target="_blank">
+        <img src="/assets/img/tnail6.png" alt="Heat Exchanger" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Helical Fins Heat Exchanger</h3>
+        <div class="project-tags">
+          <span class="project-tag">Design</span>
+          <span class="project-tag">Analysis</span>
+        </div>
+        <p class="project-description">
+          Designed and modeled a double pipe heat exchanger, performing calculations on heat transfer and pressure drops, validated with industrial standards.
+        </p>
+        <a href="https://drive.google.com/file/d/1igNGfvtLauIGPz-UvCzp3iqHAThWfWpB/view?usp=sharing" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="drag-hint">
+    <span>→ Drag to explore more projects</span>
+  </div>
 </div>
 
+<script>
+// Draggable carousel functionality
+const carousel = document.getElementById('projectCarousel');
+let isDown = false;
+let startX;
+let scrollLeft;
 
- <div class="project-card">
-  <h3>2. AI Chatbot Disclosure and Customer Behavior Analysis</h3>
-    <p>
-        Studied an experimental dataset using SQL, Python, and Gretl to analyze AI chatbot disclosure.Extracted insights showing financial attributes influence purchase behavior more than call dynamics.Delivered analytical workflows and visualizations to support data-driven business strategy.
-  </p>
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carousel.style.cursor = 'grabbing';
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
 
-  <a href="https://github.com/dhruvi-sisodiya/business_intelligence-AI_chatbot_disclosure" target="_blank"><img src="/assets/img/tnail1.png" alt="Thumbnail 1" width="1000" /></a>
-</div>
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carousel.style.cursor = 'grab';
+});
 
- <div class="project-card">
-  <h3>3. Movie Performance and Profitability Analysis using Excel Dashboard</h3>
-    <p>
-        Performed data cleaning, analysis, and visualization on a dataset of Hollywood movies to explore trends in budget, revenue, and ratings across years, genres, and production companies using Excel. Designed an interactive dashboard integrating pivot charts and slicers to uncover insights on profitability, audience preferences, and production performance, aiding data-driven decision-making.
-  </p>
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.style.cursor = 'grab';
+});
 
-  <a href="https://docs.google.com/spreadsheets/d/1PRsDHUQzEJgM6h4xdb6mGeAUgB19PLX-/edit?usp=sharing&ouid=115653807694612666399&rtpof=true&sd=true" target="_blank"><img src="/assets/img/tnail_2.png" alt="Thumbnail 1" width="1000" /></a>
-</div>
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2;
+  carousel.scrollLeft = scrollLeft - walk;
+});
 
-<div class="project">
-    <h3>4. Restaurant Tips Analysis</h3>
-    <p>
-        Applied SQL, Python, and Gretl to evaluate drivers of tipping behavior in restaurants.
-        Identified key customer and service factors shaping tipping decisions through statistical models.Provided actionable insights into consumer patterns for hospitality sector optimization.
-    </p>
-    <a href="https://drive.google.com/file/d/1DE64WGdTxbZrbLa_m5AyZTDSlHnVSZO-/view?usp=sharing" target="_blank">
-    <img src="/assets/img/tnail2.png" alt="Thumbnail 2" width="1000" /></a>
-</div>
+// Touch support for mobile
+carousel.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
 
-<div class="project">
-    <h3>5. Business Case Study - Vodafone</h3>
-    <p>
-        Analyzed the evolution of India’s telecom industry with a focus on Vodafone’s entry, merger with Idea, and strategic challenges. Evaluated market concentration, pricing disruption from Jio, and financial impacts such as AGR dues.  
-    </p>
-    <a href="https://drive.google.com/file/d/1pMuQJvz8JNXRrVClzEXySzyNpG8HbE_R/view?usp=sharing" target="_blank">
-        <img src="/assets/img/tnail3.png" alt="Thumbnail 3" width="1000" />
-    </a>
-
-<div class="project">
-    <h3>6. Simulation-based Study of Diffusion through Porous Membranes using COMSOL Multiphysics</h3>
-    <p>
-        Developed COMSOL multiphysics models to study diffusion and vapor transport in membranes.
-        Analyzed coupled effects of geometry, porosity, flow, and temperature on transport phenomena.
-        Discovered enhancement mechanisms that improve efficiency in porous membrane systems.
-    </p>
-     <a href="https://drive.google.com/drive/folders/17DDzrFSeGdRjA_Oma8wAL4fD4M0Y1-iL?usp=drive_link" target="_blank">
-        <img src="/assets/img/tnail4.png" alt="Thumbnail 4" width="1000" />
-    </a>
-
-<div class="project">
-    <h3>7. Simulation and Optimization of Ethylene Glycol Production from Ethylene Oxide (Aspen + MATLAB)</h3>
-    <p>
-        Simulated continuous ethylene glycol production from ethylene oxide using Aspen Plus.
-        Optimized process parameters to achieve 97.8% yield while minimizing by-products DEG/TEG.
-        Integrated MATLAB parametric studies to validate efficiency with industrial-scale data.
-    </p>
-     <a href="https://drive.google.com/drive/folders/1ovd3u93y81AISCwJM5rUMYYT8mMA2RJS?usp=drive_link" target="_blank">
-       View Project
-    </a>
-
-<div class="project">
-    <h3>8. Efficiency and effectiveness calculation of Helical Fins in a Double Heat Exchanger</h3>
-    <p>
-        Designed and modeled a Double Pipr heat exchanger for process efficiency improvements.
-        Performed calculations on heat transfer, pressure drops, and optimized design for performance.Validated theoretical designs with industrial standards for chemical process applications.
-    </p>
-     <a href="https://drive.google.com/file/d/1igNGfvtLauIGPz-UvCzp3iqHAThWfWpB/view?usp=sharing" target="_blank">
-        <img src="/assets/img/tnail6.png" alt="Thumbnail 6" width="1000" />
-    </a>
-
-<!-- ---
-layout: page
-title: "Projects"
-subtitle: Academic Projects
---- -->
+carousel.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2;
+  carousel.scrollLeft = scrollLeft - walk;
+});
+</script>
