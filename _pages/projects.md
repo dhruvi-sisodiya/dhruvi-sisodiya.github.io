@@ -248,6 +248,23 @@ thumbnail-img: "/assets/img/tnail_1.png"
     </div>
 
     <div class="project-carousel-card">
+      <a href="https://drive.google.com/file/d/14aaRboA4eHZRqhszYNiB4k90aCoICSUW/view?usp=sharing" target="_blank">
+        <img src="/assets/img/AirBNB_Thumbnail.png" alt="Airbnb NYC Analysis" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Analysis of Airbnb New York Dataset</h3>
+        <div class="project-tags">
+          <span class="project-tag">Marketing Analytics</span>
+          <span class="project-tag">Data Analysis</span>
+        </div>
+        <p class="project-description">
+          Comprehensive analysis of Airbnb NYC dataset examining listing patterns, pricing trends, room types distribution, and booking metrics to uncover market insights.
+        </p>
+        <a href="https://drive.google.com/file/d/14aaRboA4eHZRqhszYNiB4k90aCoICSUW/view?usp=sharing" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
       <a href="https://docs.google.com/spreadsheets/d/1PRsDHUQzEJgM6h4xdb6mGeAUgB19PLX-/edit?usp=sharing&ouid=115653807694612666399&rtpof=true&sd=true" target="_blank">
         <img src="/assets/img/tnail_2.png" alt="Movie Analytics" class="project-image">
       </a>
