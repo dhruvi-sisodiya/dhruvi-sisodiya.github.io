@@ -214,6 +214,24 @@ thumbnail-img: "/assets/img/tnail_1.png"
   <div class="carousel-wrapper" id="projectCarousel">
     
     <div class="project-carousel-card">
+      <a href="https://github.com/dhruvi-sisodiya/userology-helpdesk/tree/main" target="_blank">
+        <img src="/assets/img/userology helpdeask project thumbnail.png" alt="Userology Helpdesk" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">User-Centric Helpdesk Experience Rebuild for Userology</h3>
+        <div class="project-tags">
+          <span class="project-tag">HTML/CSS/JS</span>
+          <span class="project-tag">Python Automation</span>
+          <span class="project-tag">UX Design</span>
+        </div>
+        <p class="project-description">
+          Built a fully functional, integration-ready Help Center with real-time search and workflow navigation. Delivered a fully responsive, brand-matched UI using HTML/CSS/JS and Python automation, optimizing page hierarchy, user funnels, and layout behaviors to meet specific user needs and match the main Website's design system.
+        </p>
+        <a href="https://github.com/dhruvi-sisodiya/userology-helpdesk/tree/main" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
       <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank">
         <img src="/assets/img/tnail_1.png" alt="Sales Analytics Dashboard" class="project-image">
       </a>
@@ -244,6 +262,23 @@ thumbnail-img: "/assets/img/tnail_1.png"
           Experimental study using SQL, Python, and Gretl to analyze AI chatbot disclosure and customer behavior, revealing financial attributes' influence on purchase decisions.
         </p>
         <a href="https://github.com/dhruvi-sisodiya/business_intelligence-AI_chatbot_disclosure" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-carousel-card">
+      <a href="https://drive.google.com/drive/folders/1SE81ddb4jNfRc3rYPje48fZ5E_979TUb?usp=sharing" target="_blank">
+        <img src="/assets/img/Invengic - Bussiness Strategy.png" alt="Invengic Ventures Business Strategy" class="project-image">
+      </a>
+      <div class="project-content">
+        <h3 class="project-title">Invengic Ventures Pvt. Ltd.</h3>
+        <div class="project-tags">
+          <span class="project-tag">Business Strategy</span>
+          <span class="project-tag">Market Analysis</span>
+        </div>
+        <p class="project-description">
+          Strategic business analysis for warehouse automation company using Porter's Five Forces, SWOT, PESTEL, and Blue Ocean Strategy to identify growth opportunities and competitive positioning in the robotics industry.
+        </p>
+        <a href="https://drive.google.com/drive/folders/1SE81ddb4jNfRc3rYPje48fZ5E_979TUb?usp=sharing" target="_blank" class="project-link">View Project</a>
       </div>
     </div>
 
