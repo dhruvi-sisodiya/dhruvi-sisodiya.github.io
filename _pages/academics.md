@@ -113,7 +113,8 @@ description: Get to know me better. Learn about my story and what makes me uniqu
   <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
     <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm Dhruvi</h2>
     <p style="font-size: 1.125rem; line-height: 1.8; color: #4A5568;">
-      A senior undergraduate at <strong>IIT Gandhinagar</strong> passionate about bridging the gap between engineering and business. I combine technical expertise with strategic thinking, analytics, and creative design to solve complex problems and drive innovation.
+      Senior undergraduate at <strong>IIT Gandhinagar</strong> with a Minor in Management.
+      Interested in applying analytical thinking and user-focused problem solving at the intersection of Product Management and Business Analytics. Passionate about translating data, user insights, and strategy into impactful product decisions.
     </p>
   </div>
 </section>
@@ -157,7 +158,7 @@ description: Get to know me better. Learn about my story and what makes me uniqu
 <section style="margin-bottom: 3rem;">
   <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Technical Skills</h2>
   
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 1000px; margin: 0 auto;">
+  <div class="skills-grid">
     <div class="skill-card">
       <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">💻 Programming & Analytics</h3>
       <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
@@ -242,4 +243,96 @@ description: Get to know me better. Learn about my story and what makes me uniqu
   box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
   border-left: 3px solid #5A67D8;
 }
+
+.achievement-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(102,126,234,0.18);
+}
+
+.achievement-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  margin-top: 6px;
+}
+
+.achievement-text {
+  font-size: 0.95rem;
+  color: #2D3748;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.achievement-text strong {
+  color: #1A202C;
+}
+
+/* ── Skills grid ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ── Responsive overrides ── */
+@media (max-width: 768px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .intro-section div { padding: 0 0.5rem; }
+  .intro-section h2 { font-size: 1.75rem !important; }
+  .intro-section p  { font-size: 1rem !important; }
+}
+
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
 </style>
+
+<section style="margin-bottom: 3rem;">
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Leadership &amp; Extracurriculars</h2>
+
+  <div class="achievement-item">
+    <div class="achievement-dot"></div>
+    <p class="achievement-text"><strong>Design Head — TEDxIITGandhinagar (2024):</strong> Led the design team for TEDxIITGandhinagar; responsible for complete visual identity, marketing creatives, and event branding.</p>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-dot"></div>
+    <p class="achievement-text"><strong>Design Coordinator — Amalthea, IIT Gandhinagar (2023):</strong> Managed design operations for Amalthea, the annual technical and entrepreneurship summit of IIT Gandhinagar.</p>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-dot"></div>
+    <p class="achievement-text"><strong>Member — Student Gymkhana, IIT Gandhinagar:</strong> Active member of the student governing body contributing to campus life and student welfare initiatives.</p>
+  </div>
+</section>
+
+<section style="margin-bottom: 3rem;">
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Achievements</h2>
+
+  <div class="achievement-item">
+    <div class="achievement-dot"></div>
+    <p class="achievement-text"><strong>Dean's List Award — IIT Gandhinagar (Semester IV &amp; Semester VI):</strong> Awarded for excellent academic performance in Semester IV and Semester VI of the undergraduate programme.</p>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-dot"></div>
+    <p class="achievement-text"><strong>Academic Citation — IIT Gandhinagar (Semester VII):</strong> Recognised by the Institute for exemplary academic performance in Semester VII of the undergraduate programme.</p>
+  </div>
+</section>

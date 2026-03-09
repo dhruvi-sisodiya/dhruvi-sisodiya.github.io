@@ -3,244 +3,400 @@ layout: page
 title: Dhruvi Sisodiya
 subtitle: Senior Undergraduate - IIT Gandhinagar
 use-site-title: false
-description: Get to know me better. Learn about my story and what makes me unique.
+description: Portfolio of Dhruvi Sisodiya – projects, design work, and more.
 ---
 
 <style>
-.roadmap-container {
-  position: relative;
-  padding: 3rem 0;
-  margin: 2rem 0;
+/* ── Section headings ── */
+.preview-section {
+  margin-bottom: 3rem;
 }
 
-.roadmap-path {
+.preview-section-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  position: relative;
-  padding: 0 2rem 2rem 2rem;
-  overflow-x: visible;
-  gap: 1rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.5rem;
 }
 
-.roadmap-path::before {
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: 12%;
-  right: 12%;
-  height: 3px;
-  background: linear-gradient(90deg, #667EEA 0%, #764BA2 100%);
-  z-index: 0;
-}
-
-.journey-milestone {
-  flex: 1;
-  min-width: 140px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.milestone-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 0.75rem;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-  transition: all 0.3s ease;
-  border: 3px solid #667EEA;
-}
-
-.journey-milestone:hover .milestone-icon {
-  transform: scale(1.15) rotate(5deg);
-  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
-}
-
-.milestone-title {
-  font-size: 0.85rem;
+.preview-section-header h2 {
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #2D3748;
-  margin-bottom: 0.4rem;
+  color: #1A202C;
+  margin: 0;
 }
 
-.milestone-subtitle {
-  font-size: 0.75rem;
+@media (max-width: 480px) {
+  .preview-section-header h2 { font-size: 1.35rem; }
+}
+
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: #667EEA;
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 2px solid #667EEA;
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-.milestone-detail {
-  font-size: 0.7rem;
-  color: #718096;
-  line-height: 1.3;
+.view-all-link:hover {
+  background: #667EEA;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-@media (max-width: 768px) {
-  .roadmap-path {
+/* ── Project preview strip ── */
+.projects-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.project-preview-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(102, 126, 234, 0.25),
+              0 0 20px rgba(102, 126, 234, 0.15);
+}
+
+.project-preview-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-preview-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #F7FAFC;
+  display: block;
+}
+
+.project-preview-body {
+  padding: 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .project-preview-body { padding: 14px 16px 16px; }
+}
+
+.project-preview-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2D3748;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .project-preview-title { font-size: 0.95rem; }
+}
+
+.project-preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-preview-tag {
+  padding: 4px 11px;
+  background: #EDF2F7;
+  color: #667EEA;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ── Design preview grid ── */
+.design-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 992px) {
+  .design-strip { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+
+@media (max-width: 600px) {
+  .design-strip { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
+.design-preview-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #F7FAFC;
+  aspect-ratio: 1/1;
+}
+
+.design-preview-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(102, 126, 234, 0.25);
+}
+
+.design-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Divider ── */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667EEA 30%, #764BA2 70%, transparent);
+  margin: 0 0 3rem;
+  opacity: 0.25;
+}
+
+/* ── Hero intro ── */
+.hero-intro {
+  margin-bottom: 2.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+  border-radius: 16px;
+  border-left: 4px solid #667EEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .hero-intro {
+    padding: 1.25rem 1.25rem;
     flex-direction: column;
-    gap: 3rem;
-  }
-  
-  .roadmap-path::before {
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    right: auto;
-    width: 3px;
-    height: auto;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, #667EEA 0%, #764BA2 100%);
-  }
-  
-  .journey-milestone {
-    min-width: 100%;
+    align-items: flex-start;
+    gap: 1rem;
   }
 }
-</style>
 
-<section class="intro-section" style="margin-bottom: 3rem;">
-  <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm Dhruvi</h2>
-    <p style="font-size: 1.125rem; line-height: 1.8; color: #4A5568;">
-      A senior undergraduate at <strong>IIT Gandhinagar</strong> passionate about bridging the gap between engineering and business. I combine technical expertise with strategic thinking, analytics, and creative design to solve complex problems and drive innovation.
-    </p>
-  </div>
-</section>
+.hero-intro-text p {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: #2D3748;
+  line-height: 1.7;
+}
 
-<section style="margin-bottom: 3rem;">
-  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">My Journey</h2>
-  
-  <div class="roadmap-container">
-    <div class="roadmap-path">
-      <div class="journey-milestone">
-        <div class="milestone-icon">🎓</div>
-        <div class="milestone-title">Academic Foundation</div>
-        <div class="milestone-subtitle">IIT Gandhinagar</div>
-        <div class="milestone-detail">B.Tech Chemical Engineering</div>
-      </div>
-      
-      <div class="journey-milestone">
-        <div class="milestone-icon">📊</div>
-        <div class="milestone-title">Analytics & Strategy</div>
-        <div class="milestone-subtitle">Data-Driven Projects</div>
-        <div class="milestone-detail">Python, SQL, Power BI</div>
-      </div>
-      
-      <div class="journey-milestone">
-        <div class="milestone-icon">🔬</div>
-        <div class="milestone-title">Internships</div>
-        <div class="milestone-subtitle">IOCL & DRDO-IITGN</div>
-        <div class="milestone-detail">Process engineering & fuel cell research</div>
-      </div>
-      
-      <div class="journey-milestone">
-        <div class="milestone-icon">🎨</div>
-        <div class="milestone-title">Creative Leadership</div>
-        <div class="milestone-subtitle">TEDx '24 & Amalthea '23</div>
-        <div class="milestone-detail">Design Team Lead & Coordinator</div>
-      </div>
-    </div>
-  </div>
-</section>
+@media (max-width: 480px) {
+  .hero-intro-text p { font-size: 0.95rem; }
+}
 
-<section style="margin-bottom: 3rem;">
-  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Technical Skills</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 1000px; margin: 0 auto;">
-    <div class="skill-card">
-      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">💻 Programming & Analytics</h3>
-      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
-        <li style="padding: 0.25rem 0;">✓ Python, SQL, MATLAB</li>
-        <li style="padding: 0.25rem 0;">✓ Excel, Power BI</li>
-      </ul>
-    </div>
-    
-    <div class="skill-card">
-      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">🛠️ Engineering Tools</h3>
-      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
-        <li style="padding: 0.25rem 0;">✓ COMSOL, ANSYS</li>
-        <li style="padding: 0.25rem 0;">✓ Aspen Plus, Inventor</li>
-      </ul>
-    </div>
-    
-    <div class="skill-card">
-      <h3 style="color: #667EEA; margin-bottom: 0.75rem; font-size: 1rem;">🎨 Design & Communication</h3>
-      <ul style="list-style: none; padding: 0; font-size: 0.875rem;">
-        <li style="padding: 0.25rem 0;">✓ Adobe Illustrator, Canva</li>
-        <li style="padding: 0.25rem 0;">✓ LaTeX, Brand Strategy</li>
-      </ul>
-    </div>
-  </div>
-</section>
+.hero-intro-text p:last-child { margin: 0; }
 
-<section style="margin-bottom: 3rem;">
-  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Areas of Interest</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; max-width: 900px; margin: 0 auto;">
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Business Analytics</span>
-    </div>
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Strategy Consulting</span>
-    </div>
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Market Research</span>
-    </div>
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">Product Development</span>
-    </div>
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">User Research</span>
-    </div>
-    <div class="interest-card">
-      <span style="color: #4A5568; font-weight: 600; font-size: 0.9375rem;">UI/UX Design</span>
-    </div>
-  </div>
-</section>
-
-<style>
-.skill-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #667EEA;
+.hero-intro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #667EEA;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 2px solid #667EEA;
+  padding: 8px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
   transition: all 0.3s ease;
-  cursor: pointer;
+  flex-shrink: 0;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-  border-left: 3px solid #5A67D8;
+.hero-intro-cta:hover {
+  background: #667EEA;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-.interest-card {
+/* ── Achievements (used on homepage style block) ── */
+.achievement-item {
   background: white;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #667EEA;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.interest-card:hover {
+.achievement-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
-  border-left: 3px solid #5A67D8;
+  box-shadow: 0 8px 22px rgba(102,126,234,0.18);
+}
+
+.achievement-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  margin-top: 5px;
+}
+
+.achievement-text {
+  font-size: 0.95rem;
+  color: #2D3748;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.achievement-text strong {
+  color: #1A202C;
 }
 </style>
 
+<!-- ═══════════════════════════════════════ HERO INTRO ══════ -->
+<div class="hero-intro">
+  <div class="hero-intro-text">
+    <p>Senior undergraduate at <strong>IIT Gandhinagar</strong> studying Chemical Engineering with a Minor in Management.</p>
+    <p>Aspiring Product and Business Analyst, interested in leveraging data, strategy, and user insights to drive product decisions and solve real-world business problems.</p>
+  </div>
+  <a href="/academics" class="hero-intro-cta">About Me →</a>
+</div>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════ PROJECTS PREVIEW ═══ -->
+<div class="preview-section">
+  <div class="preview-section-header">
+    <h2>Featured Projects</h2>
+    <a href="/projects" class="view-all-link">View all →</a>
+  </div>
+
+  <div class="projects-strip">
+
+    <div class="project-preview-card">
+      <a href="https://github.com/dhruvi-sisodiya/userology-helpdesk/tree/main" target="_blank">
+        <img src="/assets/img/userology helpdeask project thumbnail.png"
+             alt="Userology Helpdesk" class="project-preview-img">
+        <div class="project-preview-body">
+          <p class="project-preview-title">User-Centric Helpdesk Experience Rebuild for Userology</p>
+          <div class="project-preview-tags">
+            <span class="project-preview-tag">HTML/CSS/JS</span>
+            <span class="project-preview-tag">UX Design</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="project-preview-card">
+      <a href="https://drive.google.com/drive/folders/1JX4vxVmLHawc6d335NAPNy5jrZ5mIUHb?usp=sharing" target="_blank">
+        <img src="/assets/img/tnail_1.png"
+             alt="Sales Analytics Dashboard" class="project-preview-img">
+        <div class="project-preview-body">
+          <p class="project-preview-title">Sales Analytics Dashboard</p>
+          <div class="project-preview-tags">
+            <span class="project-preview-tag">Power BI</span>
+            <span class="project-preview-tag">Analytics</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="project-preview-card">
+      <a href="https://drive.google.com/drive/folders/1SE81ddb4jNfRc3rYPje48fZ5E_979TUb?usp=sharing" target="_blank">
+        <img src="/assets/img/Invengic - Bussiness Strategy.png"
+             alt="Invengic Ventures" class="project-preview-img">
+        <div class="project-preview-body">
+          <p class="project-preview-title">Invengic Ventures Pvt. Ltd.</p>
+          <div class="project-preview-tags">
+            <span class="project-preview-tag">Business Strategy</span>
+            <span class="project-preview-tag">Market Analysis</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════ DESIGN PREVIEW ════ -->
+<div class="preview-section">
+  <div class="preview-section-header">
+    <h2>Design Work</h2>
+    <a href="/designportfolio" class="view-all-link">View all →</a>
+  </div>
+
+  <div class="design-strip">
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/design1.png" alt="Design Work 1">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/design2.png" alt="Design Work 2">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/TT5_P1.png" alt="Design Work 3">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/TT7_01.png" alt="Design Work 4">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/merch1.png" alt="Design Work 5">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/design5.png" alt="Design Work 6">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/design9.png" alt="Design Work 7">
+      </a>
+    </div>
+
+    <div class="design-preview-card">
+      <a href="/designportfolio">
+        <img src="/assets/img/design13.png" alt="Design Work 8">
+      </a>
+    </div>
+
+  </div>
+</div>
