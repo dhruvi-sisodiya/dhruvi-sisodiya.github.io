@@ -164,11 +164,11 @@ thumbnail-img: "/assets/img/design12.jpeg"
   <p>I have a strong interest in graphic design and visual presentation, which I've developed through key leadership roles at IIT Gandhinagar.</p>
 </div>
 
-# TEDxIITGandhinagar '24
+<h1 class="roboto-heading">TEDxIITGandhinagar '24</h1>
 
 <p style="max-width: 1500px; margin: 0 auto 30px; padding: 0;">As Design Team Lead, I guided a team of 10 members. I worked on creating the event's identity across merchandise, social media campaigns, and stage design.</p>
 
-<h2 style="font-weight:normal;">Social Media Posts</h2>
+<h2 class="roboto-heading" style="font-weight:normal;">Social Media Posts</h2>
 
 <div class="carousel-container">
   <div class="carousel-wrapper" id="tedxSocialCarousel">
@@ -196,7 +196,7 @@ thumbnail-img: "/assets/img/design12.jpeg"
   </div>
 </div>
 
-<h2 style="font-weight:normal;">TEDx Merchandise</h2> 
+<h2 class="roboto-heading" style="font-weight:normal;">TEDx Merchandise</h2> 
 
 <div class="carousel-container">
   <div class="carousel-wrapper" id="tedxMerchCarousel">
@@ -217,11 +217,11 @@ thumbnail-img: "/assets/img/design12.jpeg"
 
 ---
 
-# Amalthea '23 (Annual Tech Summit of IIT Gandhinagar)
+<h1 class="roboto-heading">Amalthea '23 (Annual Tech Summit of IIT Gandhinagar)</h1>
 
 <p style="max-width: 1500px; margin: 0 auto 30px; padding: 0;">As Design Team Coordinator, I led a 25-member team. I built a cohesive brand presence through social media outreach and large-scale design work across campus and city installations.</p>
 
-<h2 style="font-weight:normal;">Social Media Posts</h2>
+<h2 class="roboto-heading" style="font-weight:normal;">Social Media Posts</h2>
 
 <div class="carousel-container">
   <div class="carousel-wrapper" id="amaltheaSocialCarousel">
@@ -264,7 +264,7 @@ thumbnail-img: "/assets/img/design12.jpeg"
   </div>
 </div>
 
-<h2 style="font-weight:normal;">Merchandise and Printing Media</h2>
+<h2 class="roboto-heading" style="font-weight:normal;">Merchandise and Printing Media</h2>
 
 <div class="carousel-container">
   <div class="carousel-wrapper" id="amaltheaMerchCarousel">

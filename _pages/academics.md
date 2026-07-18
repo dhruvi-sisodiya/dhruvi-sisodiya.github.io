@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-subtitle: Senior Undergraduate - IIT Gandhinagar
+subtitle: Decision Analytics Associate at ZS
 featured-on-home: false
 description: Get to know me better. Learn about my story and what makes me unique.
 ---
@@ -111,16 +111,16 @@ description: Get to know me better. Learn about my story and what makes me uniqu
 
 <section class="intro-section" style="margin-bottom: 3rem;">
   <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm Dhruvi</h2>
+    <h2 class="roboto-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm Dhruvi</h2>
     <p style="font-size: 1.125rem; line-height: 1.8; color: #4A5568;">
-      Senior undergraduate at <strong>IIT Gandhinagar</strong> with a Minor in Management.
+      Decision Analytics Associate at <strong>ZS</strong>.
       Interested in applying analytical thinking and user-focused problem solving at the intersection of Product Management and Business Analytics. Passionate about translating data, user insights, and strategy into impactful product decisions.
     </p>
   </div>
 </section>
 
 <section style="margin-bottom: 3rem;">
-  <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">My Journey</h2>
+  <h2 class="roboto-heading" style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">My Journey</h2>
   
   <div class="roadmap-container">
     <div class="roadmap-path">
